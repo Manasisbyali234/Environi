@@ -17,15 +17,27 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold tracking-tight;
   }
+  
+  /* Ensure smooth scrolling on mobile */
+  html {
+    @apply scroll-smooth;
+  }
+  
+  /* Improve touch targets on mobile */
+  @media (max-width: 768px) {
+    button, a {
+      min-height: 44px;
+    }
+  }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-sm hover:shadow-md;
+    @apply bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-sm hover:shadow-md active:scale-95;
   }
   
   .btn-secondary {
-    @apply bg-white hover:bg-slate-50 text-slate-900 border border-slate-200 hover:border-slate-300 px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-sm hover:shadow-md;
+    @apply bg-white hover:bg-slate-50 text-slate-900 border border-slate-200 hover:border-slate-300 px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-sm hover:shadow-md active:scale-95;
   }
   
   .card {
@@ -34,5 +46,44 @@
   
   .section-padding {
     @apply py-16 sm:py-20 lg:py-24;
+  }
+  
+  /* Client section animations */
+  .animate-scroll {
+    animation: scroll 15s linear infinite;
+  }
+  
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Mobile-specific utilities */
+  .mobile-menu-item {
+    @apply block w-full text-left px-3 py-3 text-base font-medium text-slate-700 hover:text-emerald-600 hover:bg-slate-50 rounded-md transition-all active:bg-slate-100;
+  }
+  
+  .mobile-container {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  .mobile-text {
+    @apply text-sm sm:text-base;
+  }
+  
+  .mobile-heading {
+    @apply text-2xl sm:text-3xl lg:text-4xl;
+  }
+  
+  .mobile-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6;
   }
 }

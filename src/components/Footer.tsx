@@ -11,7 +11,7 @@ export default function Footer() {
               <div className="p-2 bg-emerald-600 rounded-lg">
                 <Leaf className="w-6 h-6 text-white" />
               </div>
-              <span className="text-2xl font-bold">Environi</span>
+              <img src="/assets/environi-logo_page-0001.jpg" alt="Environi" className="h-8" />
             </div>
             <p className="text-slate-300 mb-6 max-w-md leading-relaxed">
               India's foremost brand of recycled and eco-friendly paper. Together, we can reverse the toxic legacy and build a sustainable future.

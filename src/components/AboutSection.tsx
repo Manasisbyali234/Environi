@@ -101,10 +101,16 @@ export default function AboutSection() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-[#6B4C3B] to-[#2F6B3E] text-white rounded-2xl p-8">
-              <p className="text-xl font-medium italic text-center">
-                "You make a strong statement of being environment friendly."
-              </p>
+            <div className="bg-gradient-to-br from-[#6B4C3B] to-[#2F6B3E] text-white rounded-2xl p-8 relative overflow-hidden">
+              <div 
+                className="absolute inset-0 bg-cover bg-center opacity-20" 
+                style={{ backgroundImage: 'url(/img/Goal_Mission.jpg)' }}
+              />
+              <div className="relative z-10">
+                <p className="text-xl font-medium italic text-center">
+                  "You make a strong statement of being environment friendly."
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>

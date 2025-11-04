@@ -1,11 +1,15 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
+import Carousel from './Carousel';
 
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center">
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-emerald-50/30 to-slate-100" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/10" />
+      <div className="absolute inset-0">
+        <Carousel />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-50/80 via-emerald-50/60 to-slate-100/80" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/20" />
       
 
       
