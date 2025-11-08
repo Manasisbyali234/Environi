@@ -37,9 +37,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight px-2 drop-shadow-lg"
+          className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight px-6 xs:px-8 sm:px-2 drop-shadow-lg text-center max-w-5xl mx-auto"
         >
-          <span className="block">Reversing a{' '}</span>
+          <span className="block mb-1">Reversing a</span>
           <span className="bg-gradient-to-r from-emerald-400 to-emerald-300 bg-clip-text text-transparent block">
             Toxic Legacy
           </span>
