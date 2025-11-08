@@ -1,11 +1,23 @@
 import { motion } from 'framer-motion';
-import { Package, Leaf, Award, Star, X } from 'lucide-react';
+import { Package, Leaf, Award, Star, X, Send } from 'lucide-react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { submitQuoteRequest } from '../utils/emailService';
 
 export default function Products() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [showQuoteModal, setShowQuoteModal] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<string>('');
+  const [quoteFormData, setQuoteFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    company: '',
+    productType: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const navigate = useNavigate();
   
   const products = [
@@ -239,7 +251,11 @@ export default function Products() {
                 
                 <div className="flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-2 sm:gap-0 mt-auto">
                   <button 
-                    onClick={() => setShowQuoteModal(true)}
+                    onClick={() => {
+                      setSelectedProduct(product.name);
+                      setQuoteFormData(prev => ({ ...prev, productType: product.name }));
+                      setShowQuoteModal(true);
+                    }}
                     className="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors text-sm flex-1 sm:flex-none"
                   >
                     Get Quote
@@ -353,7 +369,11 @@ export default function Products() {
                 Request Samples
               </button>
               <button 
-                onClick={() => setShowQuoteModal(true)}
+                onClick={() => {
+                  setSelectedProduct('General Inquiry');
+                  setQuoteFormData(prev => ({ ...prev, productType: 'General Inquiry' }));
+                  setShowQuoteModal(true);
+                }}
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors"
               >
                 Get Quote
@@ -374,45 +394,106 @@ export default function Products() {
             <div className="flex justify-between items-center mb-4 sm:mb-6">
               <h3 className="text-xl sm:text-2xl font-bold text-slate-800">Get Quote</h3>
               <button 
-                onClick={() => setShowQuoteModal(false)}
+                onClick={() => {
+                  setShowQuoteModal(false);
+                  setSubmitStatus('idle');
+                  setQuoteFormData({ name: '', email: '', phone: '', company: '', productType: '', message: '' });
+                }}
                 className="text-slate-400 hover:text-slate-600"
               >
                 <X className="w-6 h-6" />
               </button>
             </div>
             
-            <form className="space-y-4">
+            {selectedProduct && (
+              <div className="mb-4 p-3 bg-emerald-50 border border-emerald-200 rounded-lg">
+                <p className="text-sm text-emerald-700">
+                  <strong>Product:</strong> {selectedProduct}
+                </p>
+              </div>
+            )}
+            
+            {submitStatus === 'success' && (
+              <div className="mb-6 p-4 bg-green-100 text-green-700 rounded-lg">
+                Quote request submitted successfully! Check your email for confirmation.
+              </div>
+            )}
+            
+            {submitStatus === 'error' && (
+              <div className="mb-6 p-4 bg-red-100 text-red-700 rounded-lg">
+                Failed to submit quote request. Please try again.
+              </div>
+            )}
+            
+            <form onSubmit={async (e) => {
+              e.preventDefault();
+              setIsSubmitting(true);
+              setSubmitStatus('idle');
+              
+              try {
+                await submitQuoteRequest({
+                  ...quoteFormData,
+                  productType: selectedProduct || quoteFormData.productType
+                });
+                setSubmitStatus('success');
+                setQuoteFormData({ name: '', email: '', phone: '', company: '', productType: '', message: '' });
+              } catch (error) {
+                setSubmitStatus('error');
+              } finally {
+                setIsSubmitting(false);
+              }
+            }} className="space-y-4">
               <input
                 type="text"
-                placeholder="Your Name"
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                name="name"
+                value={quoteFormData.name}
+                onChange={(e) => setQuoteFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))}
+                placeholder="Your Name *"
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                required
               />
               <input
                 type="email"
-                placeholder="Email Address"
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                name="email"
+                value={quoteFormData.email}
+                onChange={(e) => setQuoteFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))}
+                placeholder="Email Address *"
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                required
               />
               <input
                 type="tel"
+                name="phone"
+                value={quoteFormData.phone}
+                onChange={(e) => setQuoteFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))}
                 placeholder="Phone Number"
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
               />
-              <select className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500">
-                <option value="">Select Product Category</option>
-                <option value="stationery">Stationery</option>
-                <option value="office">Office</option>
-                <option value="packaging">Packaging</option>
-              </select>
+              <input
+                type="text"
+                name="company"
+                value={quoteFormData.company}
+                onChange={(e) => setQuoteFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))}
+                placeholder="Company Name"
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+              />
               <textarea
+                name="message"
+                value={quoteFormData.message}
+                onChange={(e) => setQuoteFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))}
                 rows={4}
-                placeholder="Describe your requirements..."
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500"
+                placeholder="Describe your requirements... *"
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors resize-vertical"
+                required
               ></textarea>
+              <p className="text-sm text-slate-500">* Required fields</p>
               <button
                 type="submit"
-                className="w-full bg-emerald-600 text-white py-3 px-6 rounded-lg hover:bg-emerald-700 transition-colors"
+                disabled={isSubmitting}
+                className="w-full bg-emerald-600 text-white py-3 px-6 rounded-lg hover:bg-emerald-700 transition-colors flex items-center justify-center disabled:opacity-50"
               >
-                Submit Quote Request
+                <Send className="w-5 h-5 mr-2" />
+                {isSubmitting ? 'Submitting...' : 'Submit Quote Request'}
               </button>
             </form>
           </motion.div>
