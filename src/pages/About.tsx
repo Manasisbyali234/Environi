@@ -252,8 +252,8 @@ export default function About() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[1, 5, 6, 7, 8, 9].map((index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[1, 5, 6].map((index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
