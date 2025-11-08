@@ -9,7 +9,7 @@ export default function About() {
   return (
     <div className="min-h-screen bg-slate-50 pt-16">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-emerald-50 to-white">
+      <section className="relative py-12 sm:py-20 bg-gradient-to-br from-emerald-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -17,11 +17,12 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6">
-              About <span className="text-emerald-600">Environi</span>
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight">
+              Reversing a <span className="text-emerald-600">Toxic Legacy</span>
             </h1>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Leading the revolution in sustainable paper manufacturing with innovative recycling solutions
+            <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto px-2">
+              People need paper products, and the planet needs sustainability.
+              Join us in creating ethical paper solutions for a greener future.
             </p>
           </motion.div>
         </div>
