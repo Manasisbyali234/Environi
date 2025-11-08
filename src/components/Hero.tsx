@@ -37,7 +37,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-base xs:text-lg sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight px-2 drop-shadow-lg text-center max-w-xs xs:max-w-sm sm:max-w-none mx-auto"
+          className="text-sm xs:text-base sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight px-1 drop-shadow-lg text-center w-full"
         >
           <span className="block mb-1">Reversing a</span>
           <span className="bg-gradient-to-r from-emerald-400 to-emerald-300 bg-clip-text text-transparent block">
