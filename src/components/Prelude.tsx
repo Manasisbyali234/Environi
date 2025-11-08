@@ -9,7 +9,7 @@ export default function Prelude() {
 
   return (
     <section ref={ref} className="section-padding bg-gray-50">
-      <div className="max-w-5xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -22,14 +22,14 @@ export default function Prelude() {
             </div>
           </div>
           
-          <div className="card p-3 xs:p-4 sm:p-8 lg:p-12 text-center pt-10 xs:pt-12 sm:pt-16">
-            <div className="mb-3 xs:mb-4 sm:mb-6">
-              <span className="inline-block px-2.5 py-1 xs:px-3 xs:py-1.5 sm:px-4 sm:py-2 bg-slate-100 text-slate-700 rounded-full text-xs sm:text-sm font-medium">
+          <div className="card p-4 sm:p-8 lg:p-12 text-center pt-12 sm:pt-16">
+            <div className="mb-4 sm:mb-6">
+              <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-slate-100 text-slate-700 rounded-full text-xs sm:text-sm font-medium">
                 Environmental Challenge
               </span>
             </div>
             
-            <blockquote className="text-base xs:text-lg sm:text-xl lg:text-2xl text-slate-700 leading-relaxed font-medium px-1 xs:px-2 sm:px-0">
+            <blockquote className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-700 leading-relaxed font-medium px-2 sm:px-0 break-words">
               "By 2035 paper mills will produce{' '}
               <span className="font-bold text-slate-900 bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
                 billions of tons of paper
@@ -40,7 +40,7 @@ export default function Prelude() {
               </span>."
             </blockquote>
             
-            <div className="mt-4 xs:mt-6 sm:mt-8 pt-3 xs:pt-4 sm:pt-6 border-t border-slate-200">
+            <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-slate-200">
             </div>
           </div>
         </motion.div>

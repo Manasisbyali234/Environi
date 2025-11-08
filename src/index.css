@@ -86,4 +86,24 @@
   .mobile-grid {
     @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6;
   }
+  
+  /* Prevent text overflow on mobile */
+  @media (max-width: 640px) {
+    .card {
+      @apply overflow-hidden;
+    }
+    
+    blockquote {
+      @apply hyphens-auto;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    
+    /* Ensure proper text wrapping for long words */
+    .break-words {
+      word-break: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+  }
 }

@@ -49,7 +49,16 @@ export default function Header() {
             <button onClick={() => handleSectionClick('home')} className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-600 hover:bg-slate-50 rounded-md transition-all">Home</button>
             <button onClick={() => handleSectionClick('impact')} className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-600 hover:bg-slate-50 rounded-md transition-all">Impact</button>
             <button onClick={() => handleSectionClick('solution')} className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-600 hover:bg-slate-50 rounded-md transition-all">Solution</button>
-            <button onClick={() => handleSectionClick('about')} className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-600 hover:bg-slate-50 rounded-md transition-all">About</button>
+            <Link 
+              to="/about" 
+              className={`px-3 py-2 text-sm font-medium rounded-md transition-all ${
+                isActive('/about') 
+                  ? 'text-emerald-600 bg-emerald-50' 
+                  : 'text-slate-700 hover:text-emerald-600 hover:bg-slate-50'
+              }`}
+            >
+              About
+            </Link>
             <Link 
               to="/mission" 
               className={`px-3 py-2 text-sm font-medium rounded-md transition-all ${
@@ -144,12 +153,17 @@ export default function Header() {
               >
                 Solution
               </button>
-              <button 
-                onClick={() => handleSectionClick('about')} 
-                className="block w-full text-left px-3 py-2 text-base font-medium text-slate-700 hover:text-emerald-600 hover:bg-slate-50 rounded-md transition-all"
+              <Link 
+                to="/about" 
+                onClick={handleLinkClick}
+                className={`block px-3 py-2 text-base font-medium rounded-md transition-all ${
+                  isActive('/about') 
+                    ? 'text-emerald-600 bg-emerald-50' 
+                    : 'text-slate-700 hover:text-emerald-600 hover:bg-slate-50'
+                }`}
               >
                 About
-              </button>
+              </Link>
               <Link 
                 to="/mission" 
                 onClick={handleLinkClick}

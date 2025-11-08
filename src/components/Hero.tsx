@@ -1,10 +1,13 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, FileText } from 'lucide-react';
+import DemoForm from './DemoForm';
 
 export default function Hero() {
+  const [isDemoFormOpen, setIsDemoFormOpen] = useState(false);
+
   const handleScheduleDemo = () => {
-    // Opens the PDF in a new tab
-    window.open('/3169_GRS_CERTIFICATE_20230906100823.pdf', '_blank');
+    setIsDemoFormOpen(true);
   };
 
   return (
@@ -109,6 +112,11 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
+      
+      <DemoForm 
+        isOpen={isDemoFormOpen} 
+        onClose={() => setIsDemoFormOpen(false)} 
+      />
     </section>
   );
 }

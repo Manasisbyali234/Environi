@@ -13,6 +13,7 @@ import Mission from './pages/Mission';
 import Vision from './pages/Vision';
 import Products from './pages/Products';
 import Contact from './pages/Contact';
+import About from './pages/About';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
               <ContactSection />
             </>
           } />
+          <Route path="/about" element={<About />} />
           <Route path="/mission" element={<Mission />} />
           <Route path="/vision" element={<Vision />} />
           <Route path="/products" element={<Products />} />
