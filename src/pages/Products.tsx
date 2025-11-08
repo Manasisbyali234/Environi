@@ -129,8 +129,8 @@ export default function Products() {
       id: 14,
       name: "Premium Paper Collection - Series B",
       image: "/assets/photo_2025-11-08_13-07-01.jpg",
-      description: "High-quality paper sheets for various applications",
-      features: ["Multiple Weights", "Smooth Finish", "Acid-Free"],
+      description: "Eco-friendly premium paper designed for printing, crafting, and professional use.",
+      features: ["Recyclable Material", "Smooth Texture", "Available in Multiple Sizes", "Fade Resistant"],
       category: "Office"
     },
     {

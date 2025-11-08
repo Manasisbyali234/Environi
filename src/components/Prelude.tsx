@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { TreePine } from 'lucide-react';
+import { TreePine, Calendar, ExternalLink } from 'lucide-react';
 
 export default function Prelude() {
   const ref = useRef(null);
@@ -41,9 +41,37 @@ export default function Prelude() {
             </blockquote>
             
             <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-slate-200">
-              <p className="text-xs sm:text-sm text-slate-500 font-medium">
+              <div className="mb-6">
+                <h3 className="text-lg font-bold text-slate-900 mb-3">Premium Paper Collection - Series C</h3>
+                <p className="text-sm text-slate-600 mb-4">High-quality paper sheets for various applications</p>
+                
+                <div className="text-left max-w-md mx-auto">
+                  <h4 className="font-semibold text-slate-800 mb-2">Key Features:</h4>
+                  <ul className="text-sm text-slate-600 space-y-1">
+                    <li>• Multiple Weights</li>
+                    <li>• Smooth Finish</li>
+                    <li>• Acid-Free</li>
+                    <li>• Archival Quality</li>
+                    <li>• Eco-Friendly Materials</li>
+                    <li>• Professional Grade</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <p className="text-xs sm:text-sm text-slate-500 font-medium mb-6">
                 The time for sustainable solutions is now
               </p>
+              
+              <motion.button
+                onClick={() => window.open('/3169_GRS_CERTIFICATE_20230906100823.pdf', '_blank')}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-600 to-emerald-500 text-white rounded-lg hover:from-emerald-700 hover:to-emerald-600 transition-all shadow-lg font-medium"
+              >
+                <Calendar className="w-4 h-4" />
+                Schedule Demo
+                <ExternalLink className="w-4 h-4" />
+              </motion.button>
             </div>
           </div>
         </motion.div>

@@ -22,7 +22,7 @@ const contactInfo = [
   {
     icon: Globe,
     title: 'Website',
-    content: 'https://environi.netlify.app/'
+    content: 'https://environi12.netlify.app/'
   }
 ];
 
