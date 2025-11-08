@@ -104,6 +104,46 @@ export default function Products() {
       description: "Specialized paper products for unique requirements",
       features: ["Custom Sizes", "Various Textures", "Eco-Friendly"],
       category: "Office"
+    },
+    {
+      id: 13,
+      name: "Premium Paper Collection - Series A",
+      image: "/assets/photo_2025-11-08_13-06-50.jpg",
+      description: "High-quality paper sheets for various applications including printing, writing, and professional documentation",
+      features: ["Multiple Weights (80-120 GSM)", "Ultra Smooth Finish", "100% Acid-Free", "Archival Quality", "Laser & Inkjet Compatible"],
+      category: "Office"
+    },
+    {
+      id: 14,
+      name: "Premium Paper Collection - Series B",
+      image: "/assets/photo_2025-11-08_13-07-01.jpg",
+      description: "High-quality paper sheets for various applications",
+      features: ["Multiple Weights", "Smooth Finish", "Acid-Free"],
+      category: "Office"
+    },
+    {
+      id: 15,
+      name: "Premium Paper Collection - Series C",
+      image: "/assets/photo_2025-11-08_13-07-06.jpg",
+      description: "High-quality paper sheets for various applications",
+      features: ["Multiple Weights", "Smooth Finish", "Acid-Free"],
+      category: "Office"
+    },
+    {
+      id: 16,
+      name: "Premium Paper Collection - Series D",
+      image: "/assets/photo_2025-11-08_13-07-12.jpg",
+      description: "High-quality paper sheets for various applications",
+      features: ["Multiple Weights", "Smooth Finish", "Acid-Free"],
+      category: "Office"
+    },
+    {
+      id: 17,
+      name: "Premium Paper Collection - Series E",
+      image: "/assets/photo_2025-11-08_13-07-16.jpg",
+      description: "High-quality paper sheets for various applications",
+      features: ["Multiple Weights", "Smooth Finish", "Acid-Free"],
+      category: "Office"
     }
   ];
 
@@ -168,7 +208,7 @@ export default function Products() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 * index }}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow"
+              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow h-full flex flex-col"
             >
               <div className="relative">
                 <img 
@@ -181,23 +221,23 @@ export default function Products() {
                 </div>
               </div>
               
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-slate-800 mb-2">{product.name}</h3>
-                <p className="text-slate-600 mb-4">{product.description}</p>
+              <div className="p-6 flex-1 flex flex-col">
+                <h3 className="text-xl font-bold text-slate-800 mb-2 min-h-[3.5rem] flex items-center">{product.name}</h3>
+                <p className="text-slate-600 mb-4 flex-1 min-h-[3rem]">{product.description}</p>
                 
-                <div className="mb-4">
+                <div className="mb-4 flex-1">
                   <h4 className="text-sm font-semibold text-slate-700 mb-2">Key Features:</h4>
-                  <ul className="space-y-1">
+                  <ul className="space-y-1 min-h-[6rem]">
                     {product.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-slate-600">
-                        <Star className="w-3 h-3 text-emerald-500 mr-2" />
-                        {feature}
+                      <li key={idx} className="flex items-start text-sm text-slate-600">
+                        <Star className="w-3 h-3 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" />
+                        <span className="leading-tight">{feature}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
                 
-                <div className="flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-2 sm:gap-0">
+                <div className="flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-2 sm:gap-0 mt-auto">
                   <button 
                     onClick={() => setShowQuoteModal(true)}
                     className="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors text-sm flex-1 sm:flex-none"
@@ -260,31 +300,6 @@ export default function Products() {
         >
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 text-center mb-6 sm:mb-8">Product Gallery</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
-            <img 
-              src="/assets/photo_2025-11-08_10-18-43.jpg" 
-              alt="Product Showcase" 
-              className="w-full h-32 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow"
-            />
-            <img 
-              src="/assets/photo_2025-11-08_10-18-48.jpg" 
-              alt="Product Showcase" 
-              className="w-full h-32 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow"
-            />
-            <img 
-              src="/assets/photo_2025-11-08_10-18-53.jpg" 
-              alt="Product Showcase" 
-              className="w-full h-32 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow"
-            />
-            <img 
-              src="/assets/photo_2025-11-08_10-19-04.jpg" 
-              alt="Product Showcase" 
-              className="w-full h-32 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow"
-            />
-            <img 
-              src="/assets/photo_2025-11-08_10-19-00.jpg" 
-              alt="Product Showcase" 
-              className="w-full h-32 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow"
-            />
             <img 
               src="/img/Products/paper2.jpg" 
               alt="Paper Products" 

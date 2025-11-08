@@ -99,9 +99,9 @@ export default function Contact() {
                 <div>
                   <h3 className="font-semibold text-slate-800 mb-1">Email</h3>
                   <div className="text-slate-600 space-y-1">
-                    <p>Pratap@environi.co.in</p>
-                    <p>Prabhu@environi.co.in</p>
-                    <p>Harish@environi.co.in</p>
+                    <p>pratap@environi.co.in</p>
+                    <p>prabhu@environi.co.in</p>
+                    <p>harish@environi.co.in</p>
                   </div>
                 </div>
               </div>

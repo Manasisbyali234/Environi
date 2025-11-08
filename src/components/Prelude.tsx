@@ -8,7 +8,7 @@ export default function Prelude() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="section-padding bg-white">
+    <section ref={ref} className="section-padding bg-gray-50">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -30,7 +30,7 @@ export default function Prelude() {
             </div>
             
             <blockquote className="text-lg sm:text-xl lg:text-2xl text-slate-700 leading-relaxed font-medium px-2 sm:px-0">
-              "By 2020 paper mills will produce{' '}
+              "By 2030 paper mills will produce{' '}
               <span className="font-bold text-slate-900 bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
                 billions of tons of paper
               </span>

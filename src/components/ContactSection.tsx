@@ -17,12 +17,12 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    content: ['Pratap@environi.co.in', 'Prabhu@environi.co.in', 'Harish@environi.co.in']
+    content: ['pratap@environi.co.in', 'prabhu@environi.co.in', 'harish@environi.co.in']
   },
   {
     icon: Globe,
     title: 'Website',
-    content: 'www.environi.in'
+    content: 'https://environi-1.vercel.app/'
   }
 ];
 

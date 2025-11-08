@@ -20,13 +20,13 @@ export default function Footer() {
               <div className="space-y-1">
                 <div className="flex items-center gap-3 text-sm text-slate-400">
                   <Mail className="w-4 h-4" />
-                  <span>Pratap@environi.co.in</span>
+                  <span>pratap@environi.co.in</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-slate-400 ml-7">
-                  <span>Prabhu@environi.co.in</span>
+                  <span>prabhu@environi.co.in</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-slate-400 ml-7">
-                  <span>Harish@environi.co.in</span>
+                  <span>harish@environi.co.in</span>
                 </div>
               </div>
               <div className="space-y-1">

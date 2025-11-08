@@ -5,14 +5,16 @@ export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center">
       <div className="absolute inset-0">
-        <img
-          src="/intro-carousel/1.jpg"
-          alt="Hero background"
-          className="w-full h-full object-cover"
-        />
+        <div className="card overflow-hidden h-full">
+          <img
+            src="/intro-carousel/1.jpg"
+            alt="Hero background"
+            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+          />
+        </div>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-50/80 via-emerald-50/60 to-slate-100/80" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/20" />
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-50/20 via-emerald-50/15 to-slate-100/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-black/10" />
       
 
       
@@ -35,11 +37,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-xl sm:text-2xl text-slate-600 mb-12 max-w-4xl mx-auto leading-relaxed"
+          className="text-xl sm:text-2xl text-black mb-12 max-w-4xl mx-auto leading-relaxed"
         >
           People need paper products, and the planet needs sustainability.
           <br className="hidden sm:block" />
-          <span className="text-lg text-slate-500">Join us in creating ethical paper solutions for a greener future.</span>
+          <span className="text-lg text-black">Join us in creating ethical paper solutions for a greener future.</span>
         </motion.p>
         
         <motion.div
@@ -70,15 +72,15 @@ export default function Hero() {
         >
           <div className="text-center">
             <div className="text-3xl font-bold text-slate-900">100%</div>
-            <div className="text-sm text-slate-600">Recycled Materials</div>
+            <div className="text-sm text-black">Recycled Materials</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-slate-900">50+</div>
-            <div className="text-sm text-slate-600">Happy Clients</div>
+            <div className="text-sm text-black">Happy Clients</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-slate-900">5M+</div>
-            <div className="text-sm text-slate-600">Sheets Produced</div>
+            <div className="text-sm text-black">Sheets Produced</div>
           </div>
         </motion.div>
       </div>
