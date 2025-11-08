@@ -12,12 +12,12 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone',
-    content: ['+91 98452 12183', '+91 96113 99975']
+    content: ['+91 98452 12183', '+91 84314 88687', '+91 99000 83907']
   },
   {
     icon: Mail,
     title: 'Email',
-    content: 'info@environi.in'
+    content: ['Pratap@environi.co.in', 'Prabhu@environi.co.in', 'Harish@environi.co.in']
   },
   {
     icon: Globe,

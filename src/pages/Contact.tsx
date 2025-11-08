@@ -76,8 +76,8 @@ export default function Contact() {
                 <div>
                   <h3 className="font-semibold text-slate-800 mb-1">Address</h3>
                   <p className="text-slate-600">
-                    123 Sustainable Street<br />
-                    Green Valley, CA 90210
+                    #3815, Ground Floor, CT Bed, 7th Cross,<br />
+                    Banashankari 2nd Stage, Bangalore – 560070
                   </p>
                 </div>
               </div>
@@ -86,7 +86,11 @@ export default function Contact() {
                 <Phone className="w-6 h-6 text-emerald-600 mr-4 mt-1" />
                 <div>
                   <h3 className="font-semibold text-slate-800 mb-1">Phone</h3>
-                  <p className="text-slate-600">+1 (555) 123-4567</p>
+                  <div className="text-slate-600 space-y-1">
+                    <p>+91 98452 12183</p>
+                    <p>+91 84314 88687</p>
+                    <p>+91 99000 83907</p>
+                  </div>
                 </div>
               </div>
               
@@ -94,7 +98,11 @@ export default function Contact() {
                 <Mail className="w-6 h-6 text-emerald-600 mr-4 mt-1" />
                 <div>
                   <h3 className="font-semibold text-slate-800 mb-1">Email</h3>
-                  <p className="text-slate-600">info@environi.com</p>
+                  <div className="text-slate-600 space-y-1">
+                    <p>Pratap@environi.co.in</p>
+                    <p>Prabhu@environi.co.in</p>
+                    <p>Harish@environi.co.in</p>
+                  </div>
                 </div>
               </div>
             </div>

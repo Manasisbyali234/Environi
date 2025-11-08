@@ -1,12 +1,15 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
-import Carousel from './Carousel';
 
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center">
       <div className="absolute inset-0">
-        <Carousel />
+        <img
+          src="/intro-carousel/1.jpg"
+          alt="Hero background"
+          className="w-full h-full object-cover"
+        />
       </div>
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50/80 via-emerald-50/60 to-slate-100/80" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/20" />
@@ -45,10 +48,16 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
-          <button className="btn-primary flex items-center gap-2 text-lg px-8 py-4">
+          <button 
+            onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+            className="btn-primary flex items-center gap-2 text-lg px-8 py-4"
+          >
             Learn More <ArrowRight className="w-5 h-5" />
           </button>
-          <button className="btn-secondary flex items-center gap-2 text-lg px-8 py-4">
+          <button 
+            onClick={() => window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')}
+            className="btn-secondary flex items-center gap-2 text-lg px-8 py-4"
+          >
             <Play className="w-5 h-5" /> Watch Demo
           </button>
         </motion.div>

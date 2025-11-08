@@ -17,13 +17,29 @@ export default function Footer() {
               India's foremost brand of recycled and eco-friendly paper. Together, we can reverse the toxic legacy and build a sustainable future.
             </p>
             <div className="space-y-2">
-              <div className="flex items-center gap-3 text-sm text-slate-400">
-                <Mail className="w-4 h-4" />
-                <span>info@environi.in</span>
+              <div className="space-y-1">
+                <div className="flex items-center gap-3 text-sm text-slate-400">
+                  <Mail className="w-4 h-4" />
+                  <span>Pratap@environi.co.in</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm text-slate-400 ml-7">
+                  <span>Prabhu@environi.co.in</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm text-slate-400 ml-7">
+                  <span>Harish@environi.co.in</span>
+                </div>
               </div>
-              <div className="flex items-center gap-3 text-sm text-slate-400">
-                <Phone className="w-4 h-4" />
-                <span>+91 98452 12183</span>
+              <div className="space-y-1">
+                <div className="flex items-center gap-3 text-sm text-slate-400">
+                  <Phone className="w-4 h-4" />
+                  <span>+91 98452 12183</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm text-slate-400 ml-7">
+                  <span>+91 84314 88687</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm text-slate-400 ml-7">
+                  <span>+91 99000 83907</span>
+                </div>
               </div>
               <div className="flex items-start gap-3 text-sm text-slate-400">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />

@@ -259,7 +259,32 @@ export default function Products() {
           className="bg-white rounded-2xl shadow-xl p-8"
         >
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 text-center mb-6 sm:mb-8">Product Gallery</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
+            <img 
+              src="/assets/photo_2025-11-08_10-18-43.jpg" 
+              alt="Product Showcase" 
+              className="w-full h-32 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow"
+            />
+            <img 
+              src="/assets/photo_2025-11-08_10-18-48.jpg" 
+              alt="Product Showcase" 
+              className="w-full h-32 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow"
+            />
+            <img 
+              src="/assets/photo_2025-11-08_10-18-53.jpg" 
+              alt="Product Showcase" 
+              className="w-full h-32 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow"
+            />
+            <img 
+              src="/assets/photo_2025-11-08_10-19-04.jpg" 
+              alt="Product Showcase" 
+              className="w-full h-32 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow"
+            />
+            <img 
+              src="/assets/photo_2025-11-08_10-19-00.jpg" 
+              alt="Product Showcase" 
+              className="w-full h-32 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow"
+            />
             <img 
               src="/img/Products/paper2.jpg" 
               alt="Paper Products" 
