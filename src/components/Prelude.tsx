@@ -30,7 +30,7 @@ export default function Prelude() {
             </div>
             
             <blockquote className="text-lg sm:text-xl lg:text-2xl text-slate-700 leading-relaxed font-medium px-2 sm:px-0">
-              "By 2030 paper mills will produce{' '}
+              "By 2035 paper mills will produce{' '}
               <span className="font-bold text-slate-900 bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
                 billions of tons of paper
               </span>

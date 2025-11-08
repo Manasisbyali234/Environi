@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center"
+      className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8"
     >
       {/* Background Image */}
       <div className="absolute inset-0">
@@ -24,17 +24,17 @@ export default function Hero() {
       </div>
 
       {/* Overlay gradients */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-50/20 via-emerald-50/15 to-slate-100/20" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-black/10" />
+      <div className="absolute inset-0 bg-black/40 sm:bg-black/30" />
+      <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-white/20 to-white/10" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto text-center">
         {/* Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-900 mb-6 leading-tight"
+          className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2 drop-shadow-lg"
         >
           Reversing a{' '}
           <span className="bg-gradient-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent">
@@ -47,11 +47,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-xl sm:text-2xl text-black mb-12 max-w-4xl mx-auto leading-relaxed"
+          className="text-lg sm:text-xl md:text-2xl text-black font-bold mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed px-2"
         >
           People need paper products, and the planet needs sustainability.
           <br className="hidden sm:block" />
-          <span className="text-lg text-black">
+          <span className="text-base sm:text-lg text-black font-bold block mt-2">
             Join us in creating ethical paper solutions for a greener future.
           </span>
         </motion.p>
@@ -61,7 +61,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-2"
         >
           <button
             onClick={() =>
@@ -69,16 +69,16 @@ export default function Hero() {
                 behavior: 'smooth',
               })
             }
-            className="btn-primary flex items-center gap-2 text-lg px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl shadow-md transition"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl shadow-md transition-all duration-200 min-h-[48px]"
           >
-            Learn More <ArrowRight className="w-5 h-5" />
+            Learn More <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
 
           <button
             onClick={handleScheduleDemo}
-            className="btn-secondary flex items-center gap-2 text-lg px-8 py-4 bg-white border border-emerald-600 text-emerald-700 hover:bg-emerald-50 rounded-xl shadow-md transition"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-white border border-emerald-600 text-emerald-700 hover:bg-emerald-50 rounded-xl shadow-md transition-all duration-200 min-h-[48px]"
           >
-            <FileText className="w-5 h-5" /> Schedule Demo
+            <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Schedule Demo
           </button>
         </motion.div>
 
@@ -87,23 +87,23 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto"
+          className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-3xl mx-auto px-2"
         >
-          <div className="text-center">
-            <div className="text-4xl font-extrabold text-black">100%</div>
-            <div className="text-sm text-black font-medium">
+          <div className="text-center py-4">
+            <div className="text-3xl sm:text-4xl font-extrabold text-white drop-shadow-md">100%</div>
+            <div className="text-xs sm:text-sm text-white font-medium mt-1 drop-shadow-sm">
               Recycled Materials
             </div>
           </div>
 
-          <div className="text-center">
-            <div className="text-4xl font-extrabold text-black">50+</div>
-            <div className="text-sm text-black font-medium">Happy Clients</div>
+          <div className="text-center py-4">
+            <div className="text-3xl sm:text-4xl font-extrabold text-white drop-shadow-md">50+</div>
+            <div className="text-xs sm:text-sm text-white font-medium mt-1 drop-shadow-sm">Happy Clients</div>
           </div>
 
-          <div className="text-center">
-            <div className="text-4xl font-extrabold text-black">5M+</div>
-            <div className="text-sm text-black font-medium">
+          <div className="text-center py-4">
+            <div className="text-3xl sm:text-4xl font-extrabold text-white drop-shadow-md">5M+</div>
+            <div className="text-xs sm:text-sm text-white font-medium mt-1 drop-shadow-sm">
               Sheets Produced
             </div>
           </div>
