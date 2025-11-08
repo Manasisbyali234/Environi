@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { MapPin, Phone, Mail, Globe, ArrowRight } from 'lucide-react';
+import { MapPin, Phone, Mail, ArrowRight } from 'lucide-react';
 
 const contactInfo = [
   {
@@ -17,12 +17,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    content: ['pratap@environi.co.in', 'prabhu@environi.co.in', 'harish@environi.co.in']
-  },
-  {
-    icon: Globe,
-    title: 'Website',
-    content: 'https://environi12.netlify.app/'
+    content: ['pratap@environi.co.in', 'harish@environi.co.in', 'prabhu@environi.co.in']
   }
 ];
 
