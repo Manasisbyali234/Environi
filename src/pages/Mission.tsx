@@ -69,7 +69,7 @@ export default function Mission() {
             <img 
               src="/img/facts-img.png" 
               alt="Community Impact" 
-              className="w-full h-48 object-cover"
+              className="w-full h-48 object-contain bg-gray-50"
             />
             <div className="p-6 text-center">
               <Users className="w-12 h-12 text-emerald-600 mx-auto mb-4" />

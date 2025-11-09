@@ -14,6 +14,10 @@ import Vision from './pages/Vision';
 import Products from './pages/Products';
 import Contact from './pages/Contact';
 import About from './pages/About';
+import RecycledPaper from './pages/services/RecycledPaper';
+import EcoFriendlySolutions from './pages/services/EcoFriendlySolutions';
+import SustainabilityConsulting from './pages/services/SustainabilityConsulting';
+import CustomOrders from './pages/services/CustomOrders';
 
 function App() {
   return (
@@ -38,6 +42,10 @@ function App() {
           <Route path="/vision" element={<Vision />} />
           <Route path="/products" element={<Products />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/services/recycled-paper" element={<RecycledPaper />} />
+          <Route path="/services/eco-friendly-solutions" element={<EcoFriendlySolutions />} />
+          <Route path="/services/sustainability-consulting" element={<SustainabilityConsulting />} />
+          <Route path="/services/custom-orders" element={<CustomOrders />} />
         </Routes>
         <Footer />
       </div>

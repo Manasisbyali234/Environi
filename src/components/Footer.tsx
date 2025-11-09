@@ -53,9 +53,10 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-3">
               <li><a href="#home" className="text-slate-300 hover:text-emerald-400 transition-colors text-sm">Home</a></li>
-              <li><a href="#impact" className="text-slate-300 hover:text-emerald-400 transition-colors text-sm">Impact</a></li>
-              <li><a href="#solution" className="text-slate-300 hover:text-emerald-400 transition-colors text-sm">Solution</a></li>
               <li><a href="#about" className="text-slate-300 hover:text-emerald-400 transition-colors text-sm">About</a></li>
+              <li><a href="/mission" className="text-slate-300 hover:text-emerald-400 transition-colors text-sm">Mission</a></li>
+              <li><a href="/vision" className="text-slate-300 hover:text-emerald-400 transition-colors text-sm">Vision</a></li>
+              <li><a href="/products" className="text-slate-300 hover:text-emerald-400 transition-colors text-sm">Products</a></li>
               <li><a href="#contact" className="text-slate-300 hover:text-emerald-400 transition-colors text-sm">Contact</a></li>
             </ul>
           </div>
@@ -64,10 +65,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-3">
-              <li><span className="text-slate-300 text-sm">Recycled Paper</span></li>
-              <li><span className="text-slate-300 text-sm">Eco-friendly Solutions</span></li>
-              <li><span className="text-slate-300 text-sm">Sustainability Consulting</span></li>
-              <li><span className="text-slate-300 text-sm">Custom Orders</span></li>
+              <li><a href="/services/recycled-paper" className="text-slate-300 hover:text-emerald-400 transition-colors text-sm">Recycled Paper</a></li>
+              <li><a href="/services/eco-friendly-solutions" className="text-slate-300 hover:text-emerald-400 transition-colors text-sm">Eco-friendly Solutions</a></li>
+              <li><a href="/services/sustainability-consulting" className="text-slate-300 hover:text-emerald-400 transition-colors text-sm">Sustainability Consulting</a></li>
+              <li><a href="/services/custom-orders" className="text-slate-300 hover:text-emerald-400 transition-colors text-sm">Custom Orders</a></li>
             </ul>
           </div>
         </div>

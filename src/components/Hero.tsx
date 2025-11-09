@@ -68,11 +68,9 @@ export default function Hero() {
           className="flex flex-col xs:flex-row gap-3 sm:gap-4 justify-center items-center px-4 sm:px-2 max-w-md xs:max-w-none mx-auto"
         >
           <button
-            onClick={() =>
-              document.getElementById('about')?.scrollIntoView({
-                behavior: 'smooth',
-              })
-            }
+            onClick={() => {
+              window.open('/environi-presentation.pdf', '_blank');
+            }}
             className="w-full xs:w-auto flex items-center justify-center gap-2 text-sm sm:text-base md:text-lg px-4 xs:px-6 sm:px-8 py-3 sm:py-4 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg sm:rounded-xl shadow-lg transition-all duration-200 min-h-[44px] sm:min-h-[48px] font-medium"
           >
             Learn More <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />

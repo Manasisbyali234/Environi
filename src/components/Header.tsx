@@ -47,8 +47,6 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
             <button onClick={() => handleSectionClick('home')} className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-600 hover:bg-slate-50 rounded-md transition-all">Home</button>
-            <button onClick={() => handleSectionClick('impact')} className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-600 hover:bg-slate-50 rounded-md transition-all">Impact</button>
-            <button onClick={() => handleSectionClick('solution')} className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-600 hover:bg-slate-50 rounded-md transition-all">Solution</button>
             <Link 
               to="/about" 
               className={`px-3 py-2 text-sm font-medium rounded-md transition-all ${
@@ -140,18 +138,6 @@ export default function Header() {
                 className="block w-full text-left px-3 py-2 text-base font-medium text-slate-700 hover:text-emerald-600 hover:bg-slate-50 rounded-md transition-all"
               >
                 Home
-              </button>
-              <button 
-                onClick={() => handleSectionClick('impact')} 
-                className="block w-full text-left px-3 py-2 text-base font-medium text-slate-700 hover:text-emerald-600 hover:bg-slate-50 rounded-md transition-all"
-              >
-                Impact
-              </button>
-              <button 
-                onClick={() => handleSectionClick('solution')} 
-                className="block w-full text-left px-3 py-2 text-base font-medium text-slate-700 hover:text-emerald-600 hover:bg-slate-50 rounded-md transition-all"
-              >
-                Solution
               </button>
               <Link 
                 to="/about" 
